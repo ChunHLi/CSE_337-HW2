@@ -19,7 +19,7 @@ sub parse_csv {
 	return %hash;
 }
 
-
+1; # need to end with a true value;
 
 # my $fn = 'collections.csv';
 # my %collections = parse_csv($fn);
