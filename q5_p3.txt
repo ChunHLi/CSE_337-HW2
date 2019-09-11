@@ -1,0 +1,30 @@
+Matches to [-+]?\d*(\.\D+)?F\s:
+1. "-1.AF "
+2. "+6F "
+3. "F "
+
+Does not match to [-+]?\d*(\.\D+)?F\s:
+1. "F F"
+2. "F"
+3. "+F1 "
+
+
+Matches to (#?)(1?)(one)\1\2\3:
+1. "#1one#1one"
+2. "oneone"
+3. "#one#one"
+
+Does not match to (#?)(1?)(one)\1\2\3:
+1. "##one##one"
+2. "11one#one"
+3. "#1#1"
+
+Matches to ((a*?)\b).*\w\2\1:
+1. "aaaaaa"
+2. "22"
+3. "asdasd"
+
+Does not match to ((a*?)\b).*\w\2\1:
+1. "??!!"
+2. "..."
+3. "####"
